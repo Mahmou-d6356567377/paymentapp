@@ -1,14 +1,18 @@
-
 import 'package:flutter/material.dart';
 import 'package:paymentapp/core/utils/colors.dart';
 import 'package:paymentapp/core/utils/fonts.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key, required this.onpress, required this.title});
+  const CustomButton({
+    super.key,
+    required this.onpress,
+    required this.title,
+    this.isLoading = false,
+  });
 
   final String title;
   final void Function()? onpress;
-
+  final isLoading;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -24,7 +28,10 @@ class CustomButton extends StatelessWidget {
               borderRadius: BorderRadius.circular(12),
             ),
           ),
-          child: Text(title, style: Fonts.style22),
+          child:
+              isLoading
+                  ? CircularProgressIndicator()
+                  : Text(title, style: Fonts.style22),
         ),
       ),
     );

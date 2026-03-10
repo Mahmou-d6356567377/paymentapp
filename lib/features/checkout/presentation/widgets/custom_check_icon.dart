@@ -1,10 +1,7 @@
-
 import 'package:flutter/material.dart';
 
 class CustomCheckIcon extends StatelessWidget {
-  const CustomCheckIcon({
-    super.key,
-  });
+  const CustomCheckIcon({super.key});
 
   @override
   Widget build(BuildContext context) {

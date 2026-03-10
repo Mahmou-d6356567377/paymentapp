@@ -10,7 +10,6 @@ class PaymentDetailsView extends StatelessWidget {
     return Scaffold(
       appBar: CustomAppBar(title: 'Payment Details'),
       body: PaymentDetailsBody(),
-      
     );
   }
 }

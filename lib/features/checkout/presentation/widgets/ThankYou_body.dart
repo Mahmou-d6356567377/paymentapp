@@ -11,10 +11,7 @@ class ThankyouBody extends StatelessWidget {
     return Stack(
       clipBehavior: Clip.none,
       children: [
-        Padding(
-          padding: const EdgeInsets.all(30.0),
-          child: ThankYouCard(),
-        ),
+        Padding(padding: const EdgeInsets.all(30.0), child: ThankYouCard()),
         Positioned(
           left: 20,
           right: 20,
@@ -33,16 +30,16 @@ class ThankyouBody extends StatelessWidget {
           ),
         ),
 
-        Positioned(
-          left: 0,
-          right: 0,
-          top: 18,
-          child: CustomCheckIcon(),
-        ),
+        Positioned(left: 0, right: 0, top: 18, child: CustomCheckIcon()),
         Positioned(
           left: 25,
           top: 18,
-          child: IconButton(onPressed:(){Navigator.pop(context);} , icon: Icon(Icons.arrow_back)),
+          child: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(Icons.arrow_back),
+          ),
         ),
       ],
     );

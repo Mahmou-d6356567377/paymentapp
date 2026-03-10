@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class PaymentMethodItem extends StatelessWidget {
-  const PaymentMethodItem({super.key, this.isSelected = false, required this.img});
+  const PaymentMethodItem({
+    super.key,
+    this.isSelected = false,
+    required this.img,
+  });
   final bool isSelected;
   final String img;
 
@@ -17,7 +21,10 @@ class PaymentMethodItem extends StatelessWidget {
         color: Colors.white,
         shape: RoundedRectangleBorder(
           side: BorderSide(
-            color: isSelected ? Color(0xFF34A853) : Color.fromARGB(255, 187, 186, 186),
+            color:
+                isSelected
+                    ? Color(0xFF34A853)
+                    : Color.fromARGB(255, 187, 186, 186),
             width: 1.5,
           ),
           borderRadius: BorderRadius.circular(15.0),

@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_credit_card/flutter_credit_card.dart';
 
 class CreditCardScreen extends StatefulWidget {
-  const CreditCardScreen({super.key, required this.formKey, required this.autovalidateMode});
+  const CreditCardScreen({
+    super.key,
+    required this.formKey,
+    required this.autovalidateMode,
+  });
   final GlobalKey<FormState> formKey;
   final AutovalidateMode autovalidateMode;
 
@@ -22,7 +26,7 @@ class _CreditCardScreenState extends State<CreditCardScreen> {
           cardNumber: cardNumber,
           expiryDate: expiryDate,
           cardHolderName: cardHolderName,
-          
+
           cvvCode: cvvCode,
           showBackView: isCvvFocused,
           isHolderNameVisible: true,

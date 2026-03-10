@@ -61,9 +61,7 @@ class ThankYouCard extends StatelessWidget {
                     child: Center(
                       child: Text(
                         'PAID',
-                        style: Fonts.style22.copyWith(
-                          color: Color(0xFF34A853),
-                        ),
+                        style: Fonts.style22.copyWith(color: Color(0xFF34A853)),
                       ),
                     ),
                   ),

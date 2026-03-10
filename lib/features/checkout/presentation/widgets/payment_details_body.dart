@@ -19,17 +19,27 @@ class _PaymentDetailsBodyState extends State<PaymentDetailsBody> {
     return CustomScrollView(
       slivers: [
         SliverToBoxAdapter(child: PaymentMethodsHeader()),
-        SliverToBoxAdapter(child:  CreditCardScreen(formKey: formKey , autovalidateMode: autovalidateMode,)),
         SliverToBoxAdapter(
-          child: CustomButton(onpress: () {
-            if(formKey.currentState!.validate()){
-              formKey.currentState!.save();
-            }else{
-             Navigator.of(context).push(MaterialPageRoute(builder: (context) => const ThankyouView(),));
+          child: CreditCardScreen(
+            formKey: formKey,
+            autovalidateMode: autovalidateMode,
+          ),
+        ),
+        SliverToBoxAdapter(
+          child: CustomButton(
+            onpress: () {
+              if (formKey.currentState!.validate()) {
+                formKey.currentState!.save();
+              } else {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const ThankyouView()),
+                );
                 autovalidateMode = AutovalidateMode.always;
-              setState(() { });
-            }
-          }, title: 'Complete Payment'),
+                setState(() {});
+              }
+            },
+            title: 'Complete Payment',
+          ),
         ),
       ],
     );
