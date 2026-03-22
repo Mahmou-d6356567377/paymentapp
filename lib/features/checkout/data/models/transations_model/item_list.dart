@@ -1,18 +1,20 @@
+import 'package:dartz/dartz.dart';
+
 import 'item.dart';
 
 class ItemList {
-  List<Item>? items;
+  List<OrderItem>? orderitems;
 
-  ItemList({this.items});
+  ItemList({this.orderitems});
 
   factory ItemList.fromJson(Map<String, dynamic> json) => ItemList(
-    items:
+    orderitems:
         (json['items'] as List<dynamic>?)
-            ?.map((e) => Item.fromJson(e as Map<String, dynamic>))
+            ?.map((e) => OrderItem.fromJson(e as Map<String, dynamic>))
             .toList(),
   );
 
   Map<String, dynamic> toJson() => {
-    'items': items?.map((e) => e.toJson()).toList(),
+    'items': orderitems?.map((e) => e.toJson()).toList(),
   };
 }
